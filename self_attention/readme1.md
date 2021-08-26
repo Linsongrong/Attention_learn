@@ -1,10 +1,10 @@
 ## self_attention
 Self-attention（NLP中往往称为Scaled-Dot Attention）的结构有三个分支：query、key和value。计算时通常分为三步：
 
-![alt picture](https://pic4.zhimg.com/v2-00fc48ffa5e4a9025e2864a01c91b587_r.jpg)
+![alt picture](../pic/s_a_1.jpg)
 
 第一步是将query和每个key进行相似度计算得到权重，常用的相似度函数有点积，cos相似度，拼接，感知机等；
-![alt picture](https://pic1.zhimg.com/v2-4d04bd76bd02f07f3f8671609a498870_r.jpg)
+![alt picture](../pic/s_a_2.jpg)
 
 第二步一般是使用一个softmax函数对这些权重进行归一化；
 
