@@ -1,7 +1,7 @@
 #SENet是早期Attention
 核心思想是学习 feature Channel 间的关系，以凸显feature Channel 不同的重要度（也就是注意力分布），进而提高模型表现。
 
-![alt picture](https://pic2.zhimg.com/v2-3ba4660b11053644db26aa6587016d99_r.jpg)
+![alt picture](../pic/senet_1.jpg)
 
 上图是SE Module 的示意图。给定一个输入 x，其特征通道数为 c_1，通过一系列卷积等一般变换后得到一个特徵通道数为 c_2 的特征。与传统的 CNN 不一样的是，接下来通过三个操作来重标定前面得到的特征。
 
@@ -14,7 +14,7 @@
 最后是一个 Scale 的操作，将 Excitation 的输出的权重看做是经过选择后的每个特征通道的重要性，然后通过channel-wise multiplication 逐通道加权到先前的特征上，完成在通道维度上的对原始特征的重标定。公式如下：
 ![alt gongshi](https://pic1.zhimg.com/v2-a921553eef4fc05af13c2a3cc828d2ec_r.jpg)
 
-![alt jiegou](https://pic1.zhimg.com/v2-be016e82174d230ec0b402c9dbbc8ecc_r.jpg)
+![alt jiegou](../pic/senet_1.jpg)
 虽然没有看到query、key和value的影子，但是其体现了不同channel应有不同权重，是早期的attention。
 
 参考链接[zhihu](https://zhuanlan.zhihu.com/p/283125663)
